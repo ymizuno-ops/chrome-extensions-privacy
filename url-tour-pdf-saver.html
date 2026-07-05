@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>プライバシーポリシー - URL巡回PDF保存</title>
+  <style>
+    body { font-family: sans-serif; max-width: 700px; margin: 40px auto; padding: 0 20px; line-height: 1.8; color: #333; }
+    h1 { font-size: 22px; border-bottom: 2px solid #ccc; padding-bottom: 8px; }
+    h2 { font-size: 16px; margin-top: 30px; }
+    .back { font-size: 13px; margin-bottom: 20px; }
+    .back a { color: #1a73e8; }
+  </style>
+</head>
+<body>
+  <p class="back"><a href="index.html">← 一覧に戻る</a></p>
+  <h1>プライバシーポリシー - URL巡回PDF保存</h1>
+  <p>最終更新日：2026年7月5日</p>
+
+  <h2>本拡張機能について</h2>
+  <p>URL巡回PDF保存は、登録したURLを1件ずつ、または順番にまとめて開き、Chromeの印刷機能でPDF化して保存する社内向けの拡張機能です。既存のブラウザのログインセッション（Cookie）をそのまま利用するため、ログイン必須の管理画面（TikTok Seller Center等）にも対応しています。外部API・AIサービスは一切使用せず、すべての処理はお使いのブラウザ内で完結します。</p>
+
+  <h2>収集するデータ</h2>
+  <p>登録したURL・メモ・実行モード・保存先フォルダ名・常時除外用のCSSセレクタ等の設定内容のみを、chrome.storage.localを用いてお使いのブラウザにローカル保存します。それ以外の個人情報・閲覧履歴・入力内容は収集しません。</p>
+
+  <h2>外部への送信</h2>
+  <p>登録したURLを開いた際にページの内容を取得しPDF化しますが、そのページ内容・生成したPDF・その他いかなるデータも外部サーバーへは一切送信しません。PDFの生成・結合処理もすべてお使いのブラウザ内で行われ、完成したPDFはローカルのダウンロードフォルダに保存されるのみです。</p>
+
+  <h2>権限について</h2>
+  <p>本拡張機能は以下の権限を使用します。</p>
+  <ul>
+    <li><strong>tabs</strong>：登録したURLへタブを順番に遷移させるため</li>
+    <li><strong>debugger</strong>：Chrome DevTools Protocol経由でChromeの印刷機能（Page.printToPDF）を呼び出し、ページ全体を正確にPDF化するため</li>
+    <li><strong>downloads</strong>：生成したPDFをローカルのダウンロードフォルダに保存するため</li>
+    <li><strong>storage</strong>：登録したURL・設定内容のローカル保存のため</li>
+    <li><strong>notifications</strong>：処理完了をOSのデスクトップ通知でお知らせするため</li>
+    <li><strong>ホストアクセス（&lt;all_urls&gt;）</strong>：利用者が任意に登録したURLを開きPDF化できるようにするため</li>
+  </ul>
+  <p>取得したページ内容はPDF化の目的にのみ使用し、外部への送信や本拡張機能の外部での保存は行いません。</p>
+
+  <h2>第三者への提供</h2>
+  <p>取得・保存したデータを第三者に販売・提供することはありません。</p>
+
+  <h2>お問い合わせ</h2>
+  <p>yuji_mizuno@cellest.co.jp</p>
+</body>
+</html>
