@@ -14,19 +14,26 @@
 <body>
   <p class="back"><a href="index.html">← 一覧に戻る</a></p>
   <h1>プライバシーポリシー - GWS Calendar Helper</h1>
-  <p>最終更新日：2026年6月25日</p>
+  <p>最終更新日：2026年7月22日</p>
 
   <h2>収集するデータ</h2>
-  <p>本拡張機能は、管理者が設定したGASウェブアプリのURLのみを、お使いのブラウザ（chrome.storage.local）にローカル保存します。</p>
+  <p>本拡張機能は、以下の情報をお使いのブラウザ内（chrome.storage.local / chrome.storage.session）にのみ保存します。外部のサーバーやデータベースへ送信することはありません。</p>
+  <ul>
+    <li>管理者が設定したGASウェブアプリのURL</li>
+    <li>表示を高速化するためにキャッシュする社員名簿データ（氏名・メールアドレス・部署名）</li>
+    <li>部署の選択状態、および利用者が作成した「マイグループ」の情報（グループ名・所属メンバーのメールアドレス）</li>
+    <li>初回認証時に開く確認用タブの識別情報（一時的なもので、認証完了後に自動的に削除されます）</li>
+  </ul>
 
   <h2>外部への送信</h2>
-  <p>社員名簿データは、管理者が設置したGoogle Apps Script（GAS）からのみ取得します。取得したデータは操作完了後に破棄され、GAS以外の外部サーバーへは一切送信しません。</p>
+  <p>社員名簿データおよびカレンダーの表示/非表示情報は、管理者が設置したGoogle Apps Script（GAS）ウェブアプリとの通信でのみやり取りされます。GAS以外の外部サーバーへの送信は一切行いません。</p>
 
   <h2>アクセスするサービス</h2>
   <p>本拡張機能は以下のサービスにのみアクセスします。</p>
   <ul>
     <li>Google カレンダー（calendar.google.com）：メンバーの表示/非表示切り替えのため</li>
-    <li>Google Apps Script（script.google.com）：管理者が設置した社員名簿取得APIのため</li>
+    <li>Google Apps Script（script.google.com / script.googleusercontent.com）：管理者が設置した社員名簿取得APIの利用、および初回認証フローのため</li>
+    <li>Google ドキュメント（docs.google.com）：GASプロキシ経由でスプレッドシートの社員名簿データを参照するため</li>
   </ul>
 
   <h2>第三者への提供</h2>
