@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>プライバシーポリシー - Tab Capture</title>
+  <style>
+    body { font-family: sans-serif; max-width: 700px; margin: 40px auto; padding: 0 20px; line-height: 1.8; color: #333; }
+    h1 { font-size: 22px; border-bottom: 2px solid #ccc; padding-bottom: 8px; }
+    h2 { font-size: 16px; margin-top: 30px; }
+  </style>
+</head>
+<body>
+  <h1>プライバシーポリシー - Tab Capture</h1>
+  <p>最終更新日：2026年7月30日</p>
+
+  <h2>本拡張機能について</h2>
+  <p>Tab Captureは、現在アクティブなブラウザタブの表示中ビューポートを撮影し、画像として保存する拡張機能です。外部API・AIサービスは一切使用せず、撮影から保存までの処理はすべてお使いのブラウザ内で完結します。</p>
+
+  <h2>収集するデータ</h2>
+  <p>撮影キーの設定、AUTOモードのトリガー種別・自動撮影の間隔秒数、起動モード（ポップアップ／ウィンドウ）、カラーテーマ、撮影対象ウィンドウの選択状態、総撮影枚数といった設定・状態のみを、chrome.storage.local / chrome.storage.sessionを用いてお使いのブラウザにローカル保存します。それ以外の個人情報・閲覧履歴・ページの入力内容は収集しません。</p>
+
+  <h2>外部への送信</h2>
+  <p>撮影した画像および上記の設定内容を含め、いかなるデータも外部サーバーへは一切送信しません。撮影した画像はChromeのダウンロード機能を使ってローカルのダウンロードフォルダに保存されるのみです。</p>
+
+  <h2>権限について</h2>
+  <p>本拡張機能は以下の権限を使用します。</p>
+  <ul>
+    <li><strong>activeTab</strong>：ツールバーアイコンやショートカットキーの操作時に、現在のタブを撮影対象にするため</li>
+    <li><strong>tabs</strong>：AUTOモードの撮影対象ウィンドウの選択・情報取得のため</li>
+    <li><strong>downloads</strong>：撮影した画像をローカルのダウンロードフォルダに保存するため</li>
+    <li><strong>storage</strong>：撮影キー・AUTOモードの設定・カラーテーマ等の設定内容のローカル保存のため</li>
+    <li><strong>offscreen</strong>：AUTOモードで一定間隔ごとに撮影する間、処理を維持するため</li>
+    <li><strong>ホストアクセス（&lt;all_urls&gt;）</strong>：任意のページ上でカスタム撮影キーの入力や、AUTOモードのトリガー（キー入力・ページ遷移）を検知できるようにするため</li>
+  </ul>
+  <p>検知したキー入力やページ遷移のタイミングは撮影の実行判定にのみ使用し、ページの内容自体を取得・保存することはありません。</p>
+
+  <h2>第三者への提供</h2>
+  <p>取得・保存したデータを第三者に販売・提供することはありません。</p>
+
+  <h2>お問い合わせ</h2>
+  <p>chillcoder129@gmail.com</p>
+</body>
+</html>
